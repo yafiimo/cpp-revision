@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "types"
+		},
+		{
+			"path": "hello"
+		},
+		{
+			"path": "classes"
+		},
+		{
+			"path": "namespaces"
+		},
+		{
+			"path": "inheritance"
+		},
+		{
+			"path": "enums"
+		},
+		{
+			"path": "flow-control"
+		},
+		{
+			"path": "functions"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}
