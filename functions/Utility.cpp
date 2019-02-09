@@ -29,7 +29,7 @@ int addFive(int& x)
     return x;
 }
 
-void printLargeValue(const long x)
+void printLargeValue(const long& x)
 {
     cout << "Printing out large value: " << x << endl;
 }

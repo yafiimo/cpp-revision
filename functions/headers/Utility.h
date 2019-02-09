@@ -17,4 +17,4 @@
 bool isPrime(int x);
 bool isEven(int x);
 int addFive(int& x);
-void printLargeValue(const long x);
+void printLargeValue(const long& x);
