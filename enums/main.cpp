@@ -16,7 +16,7 @@ int main()
     enum class NetworkError 
     {
         Ok = 200,
-        NotFound = 75,
+        NotFound = 404,
         Unauthorised = 401,
         Forbidden = 403,
         InternalServerError = 500,
