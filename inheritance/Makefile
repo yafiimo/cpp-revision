@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -g -Wall -Iheaders/
 
-output: main.o sprite.o cyclops.o
+output: main.o
 	$(CC) -o a.out main.o sprite.o cyclops.o
 
 main.o: main.cpp sprite.o cyclops.o
