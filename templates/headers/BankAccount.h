@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 
 class BankAccount
@@ -22,6 +24,8 @@ class BankAccount
 
       int operator+(int value) const;
       int operator+(BankAccount const &b) const;
+
+      int operator+=(int value) const { return balance + value; };
 
       int operator-(int value) const;
       int operator-(BankAccount const &b) const;

@@ -10,5 +10,12 @@ main.o: main.cpp bankaccount.o
 bankaccount.o: BankAccount.cpp headers/BankAccount.h
 	$(CC) $(CFLAGS) BankAccount.cpp
 
+
+accum: accum.o
+	$(CC) -o accum.out accumulator.o
+
+accum.o: Accumulator.cpp headers/Accumulator.h
+	$(CC) $(CFLAGS) Accumulator.cpp
+
 clean:
 	rm -rf *o a.out

@@ -25,6 +25,8 @@ int main()
     cout << "customMax(200, 500): " << customMax(200, 500) << endl;
     cout << "customMax(b1, b2) ie highest balance: " << customMax(b1, b2).getAccountHolder() << endl;
 
+    // Since BankAccount class has operator overload for " < ", it can apply the customMax function.
+
     /*
         Functionality below for testing class and class operators.
     */
