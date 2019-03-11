@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "BankAccount.h"
+#include "Person.h"
 
 using std::cout;
 using std::endl;
@@ -23,9 +24,14 @@ int main()
 
     cout << "customMax(\"hello\", \"bye\"): " << customMax(s1, s2) << endl;
     cout << "customMax(200, 500): " << customMax(200, 500) << endl;
-    cout << "customMax(b1, b2) ie highest balance: " << customMax(b1, b2).getAccountHolder() << endl;
 
     // Since BankAccount class has operator overload for " < ", it can apply the customMax function.
+    cout << "customMax(b1, b2) ie highest balance: " << customMax(b1, b2).getAccountHolder() << endl;
+
+    // Since Person class has operator no overload for " < ", it can't apply the customMax function.
+    // Person p1("Mo", "Yafii", 25);
+    // Person p2("Hussein", "Yafii", 21);
+    // cout << "customMax(p1, p2) ie highest age: " << customMax(p1, p2).getName() << endl;
 
     /*
         Functionality below for testing class and class operators.

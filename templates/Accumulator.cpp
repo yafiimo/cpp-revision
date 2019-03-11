@@ -1,5 +1,6 @@
 #include "Accumulator.h"
 #include "Person.h"
+#include "BankAccount.h"
 #include <iostream>
 #include <string>
 
@@ -28,14 +29,29 @@ int main()
     cout << "Total: " << strings.getTotal() << endl;
 
     
-    Person start("Mo", "Yafii", 24);
+    Person p1("Mo", "Yafii", 25);
     Person p2("Hussein", "Yafii", 21);
 
-    Accumulator<Person> people(start);
+    Accumulator<Person> people(0);
     cout << "Initial Total: " << people.getTotal() << endl;
+    cout << "Adding Mo of age 25" << endl;
+    people += p1;
+    cout << "Total: " << people.getTotal() << endl;
     cout << "Adding Hussein of age 21" << endl;
     people += p2;
     cout << "Total: " << people.getTotal() << endl;
+    
+    BankAccount b1("Mo", "Yafii", 2500);
+    BankAccount b2("Hussein", "Yafii", 4000);
+
+    Accumulator<BankAccount> accounts(0);
+    cout << "Initial Total: " << accounts.getTotal() << endl;
+    cout << "Adding Mo of age 25" << endl;
+    accounts += b1;
+    cout << "Total: " << accounts.getTotal() << endl;
+    cout << "Adding Hussein of age 21" << endl;
+    accounts += b2;
+    cout << "Total: " << accounts.getTotal() << endl;
 
     return 0;
 }

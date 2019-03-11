@@ -14,5 +14,4 @@ class Person
         
         std::string getName() const { return firstname + " " + lastname; };
         int getAge() const { return age; };
-        int operator+(Person p) { return age = age + p.age; };
 };

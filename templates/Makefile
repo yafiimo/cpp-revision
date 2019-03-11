@@ -11,8 +11,8 @@ bankaccount.o: BankAccount.cpp headers/BankAccount.h
 	$(CC) $(CFLAGS) BankAccount.cpp
 
 
-accum: accum.o
-	$(CC) -o accum.out accumulator.o
+accum: accum.o bankaccount.o headers/Person.h
+	$(CC) -o accum.out accumulator.o bankaccount.o
 
 accum.o: Accumulator.cpp headers/Accumulator.h
 	$(CC) $(CFLAGS) Accumulator.cpp

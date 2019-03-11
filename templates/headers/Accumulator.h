@@ -1,4 +1,7 @@
+#pragma once
+
 #include "Person.h"
+#include "BankAccount.h"
 
 template <class T>
 class Accumulator
@@ -14,11 +17,9 @@ class Accumulator
 
 /*
     For the Person class to be able to use the accumulator, it needs a + operator
-    between T and T (Person and Person), as the accumulator's += operator operates
-    T + T, and returns type T. The person class has a + operator operating on 
-    Person and Person, however, it returns an integer, which is different to the
-    template class the accumulator expects to return, hence a specialisation is
-    needed to handle this case.
+    between T and T (Person and Person) since the accumulator's += operator operates
+    T + T, and returns type T. This is not present on the person class, hence a
+    template specialisation is needed.
 */
 
 template <>
@@ -28,7 +29,26 @@ class Accumulator<Person>
         int total;
 
     public:
-        Accumulator(Person p) : total(p.getAge()) {};
+        Accumulator(int start) : total(start) {};
         int getTotal() const { return total; };
-        int operator+=(Person p) { return total = total + p.getAge(); };
+        int operator+=(Person const& p) { return total = total + p.getAge(); };
+};
+
+/*
+    The BankAccount class has a + operator operating on (T and T) BankAccount and
+    BankAccount, however, it returns an integer, which is different to the template
+    class the accumulator expects to return, hence a template specialisation is 
+    needed to handle this case.
+*/
+
+template <>
+class Accumulator<BankAccount>
+{
+    private:
+        int total;
+    
+    public:
+        Accumulator(int start) : total(start) {};
+        int getTotal() const { return total; };
+        int operator+=(BankAccount const& b) { return total = total + b.getBalance(); };
 };
