@@ -18,4 +18,4 @@ accum.o: Accumulator.cpp headers/Accumulator.h
 	$(CC) $(CFLAGS) Accumulator.cpp
 
 clean:
-	rm -rf *o a.out
+	rm -rf *o *out
