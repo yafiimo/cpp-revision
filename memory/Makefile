@@ -13,15 +13,17 @@ manual: manual.o
 manual.o: manual.cpp person.o headers/Resource.h
 	$(CC) $(CFLAGS) manual.cpp
 
-smart: smart.o
-	$(CC) -o smart.out smart.o person.o
-
-smart.o: smart.cpp person.o headers/Resource.h
-	$(CC) $(CFLAGS) smart.cpp
-
-
 person.o: Person.cpp headers/Person.h
 	$(CC) $(CFLAGS) Person.cpp
+
+smart: smart.o
+	$(CC) -o smart.out smart.o smartperson.o
+
+smart.o: smart.cpp smartperson.o headers/Resource.h
+	$(CC) $(CFLAGS) smart.cpp
+
+smartperson.o: SmartPerson.cpp headers/SmartPerson.h
+	$(CC) $(CFLAGS) SmartPerson.cpp
 
 clean:
 	rm -rf *o *out

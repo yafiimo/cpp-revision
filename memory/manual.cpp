@@ -23,6 +23,12 @@ using std::string;
     should be shared or unique. 
 */
 
+void printPersonAge(Person p)
+{
+    cout << p.GetName() << "'s age is " << p.GetAge() << endl;
+    return;
+}
+
 int main()
 {
     {
@@ -35,6 +41,12 @@ int main()
 
         p3 = p3;                        // Check for self assignment in copy assignment operator;
         p3 = p2;
+
+        Mo.SetName("John", "Doe");
+        cout << "Mo's name changed to " << Mo.GetName() << " but p3 is still " << p3.GetName() << endl;
+
+        // Since function takes by value, a copy is created in the function scope
+        printPersonAge(Mo);
 
         p2.AddResource();
     }

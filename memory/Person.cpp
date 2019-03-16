@@ -34,7 +34,7 @@ Person::Person(Person const& originalP)
         Ensures the copy has it's own resource. Hence, when destructing the object, problems
         won't arise due to having already deleted pResource from another copy. If a shared 
         resource was required, logic is needed to keep track of each copy and when to use
-        the destructor. For a unique resource:
+        the destructor (shallow copy with reference count). For a unique resource:
     */
 
     firstname = originalP.firstname;
