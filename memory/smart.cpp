@@ -22,7 +22,7 @@ using std::string;
     so that the template object can be used similarly to a regular pointer.
 
     A weak_ptr lets you look at the memory for a shared_ptr and copy it without
-    incrementing the count, however it must be managed manually.
+    incrementing the count.
 
     Unique_ptr cannot be copied (use std::move)
     Last destructor related to a shared_ptr clears up the memory

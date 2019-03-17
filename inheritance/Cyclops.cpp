@@ -12,8 +12,8 @@ Cyclops::Cyclops(std::string desc, int att, int def, int attMultiplier)
 Cyclops::Cyclops()
 {
     /*
-        Inherited class constructors cannot access private members of parents without
-        explicitly making this possible. Instead can use setters in parent class.
+        Inherited class cannot access private members of parents class. 
+        Instead can use setters in parent class or change to protected.
     */
 
     setDescription("Cyclops");
