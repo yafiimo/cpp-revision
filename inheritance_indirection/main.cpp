@@ -12,11 +12,11 @@ using std::make_shared;
 
 void TakePerson(Person const& p)
 {
-    /* 
-        If a Tweeter is passed into this function, since the function 
+    /*
+        If a Tweeter is passed into this function, since the function
         takes a Person reference, unless members functions are marked
-        as virtual, base class functions will be used. 
-        
+        as virtual, base class functions will be used.
+
         Also slicing occurs when copying an inherited class into,
         a base class object, meaning that members from the Tweeter object
         will be lost, including function implementations like GetName(),
@@ -36,7 +36,7 @@ int main()
     Person* pPersonMo = &Mo;
     Person copyMo = Mo;
 
-    /* 
+    /*
         When GetName() is marked as virtual it will call the Tweeter version
         of GetName() for all calls below, otherwise it will only call
         the Tweeter version with pointers/references instantiated with a Tweeter,
@@ -53,7 +53,7 @@ int main()
     cout << "Mo's name is " << copyMo.GetName() << endl;
 
     /*
-        Deleting an object of polymorphic class type 'Person' which has a 
+        Deleting an object of polymorphic class type 'Person' which has a
         non-virtual destructor, will cause the inherited class destructor
         not to run, which may cause a memory leak.
     */
@@ -64,7 +64,7 @@ int main()
 
     // Again, unless GetName() is marked as virtual, base class function
     // will run for objects initialised with the base class
-    shared_ptr<Person> pAlu = make_shared<Tweeter>("Alu", "Midge", 23, "@alumuidge");
+    shared_ptr<Person> pAlu = make_shared<Tweeter>("Alu", "Yafii", 23, "@aluyafii");
     cout << "Alu's name is " << pAlu->GetName() << endl;
 
     // Can't copy base class object into an inherited class
@@ -74,7 +74,7 @@ int main()
     // But can copy inherited class object into base class, though
     // slicing will occur
     Jane = Mo;
-    
+
 
     return 0;
 }

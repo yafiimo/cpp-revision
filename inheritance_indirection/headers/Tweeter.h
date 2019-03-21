@@ -13,11 +13,11 @@ class Tweeter : public Person
               int number, std::string handle);
 
       /*
-            If a Tweeter is object is made by reference to a Person and destructor 
-            isn't marked as virtual, this destructor may not run. A good rule is 
-            to always have the destructor as virtual if you already have other 
-            virtual functions.
-        */
+            If a Tweeter is object is made by reference to a Person pointer on the heap
+            and the destructor isn't marked as virtual, this destructor may not run. A
+            good rule is to always have the destructor as virtual if you already have
+            other virtual functions.
+       */
 
       ~Tweeter();
       std::string GetName() const;

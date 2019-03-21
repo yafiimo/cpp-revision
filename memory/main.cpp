@@ -30,6 +30,7 @@ int main()
     cout << "Resource name is " << (*pResource).GetName() << endl;
 
     delete pResource;
+    pResource = nullptr;
 
     /*
         * cannot use pResource pointer after it's deleted in memory

@@ -26,13 +26,13 @@ Person::Person(Person const& originalP)
         There is no need to clean up (eg, delete) an existing value (there is none).
         A reference to itself is not returned.
 
-        Since this object has a pointer to dynamically allocated memory, a shallow copy 
+        Since this object has a pointer to dynamically allocated memory, a shallow copy
         is insufficient for making copies of it.
     */
 
     /*
         Ensures the copy has it's own resource. Hence, when destructing the object, problems
-        won't arise due to having already deleted pResource from another copy. If a shared 
+        won't arise due to having already deleted pResource from another copy. If a shared
         resource was required, logic is needed to keep track of each copy and when to use
         the destructor (shallow copy with reference count). For a unique resource:
     */
@@ -62,6 +62,11 @@ Person& Person::operator=(Person const& originalP)
         // Must delete old value of pResource:
         delete pResource;
 
+        // Copy member variables
+        firstname = originalP.firstname;
+        lastname = originalP.lastname;
+        age = originalP.age;
+
         // Initialise new pResource from object being copied
         pResource = new Resource(originalP.pResource->GetName());
     }
@@ -69,7 +74,7 @@ Person& Person::operator=(Person const& originalP)
     {
         std::cout << "Cannot assign to self!" << std::endl;
     }
-    
+
 
     return *this;
 }

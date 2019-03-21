@@ -14,4 +14,4 @@ cyclops.o: sprite.o Cyclops.cpp headers/Cyclops.h
 	$(CC) $(CFLAGS) Cyclops.cpp
 
 clean:
-	rm -rf *o a.out
+	rm -rf *.o a.out
