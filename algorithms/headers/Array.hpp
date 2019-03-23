@@ -116,9 +116,7 @@ class Array
         }
 };
 
-
-template <typename T>
-std::ostream &operator<<(std::ostream &os, Array<T> const &a)
+std::ostream &operator<<(std::ostream &os, Array<int> const &a)
 {
     int a_size = a.Size();
     os << "[ ";
@@ -130,6 +128,17 @@ std::ostream &operator<<(std::ostream &os, Array<T> const &a)
     return os;
 }
 
+std::ostream &operator<<(std::ostream &os, Array<std::string> const &a)
+{
+    int a_size = a.Size();
+    os << "[ ";
+    for (int i = 0; i < a_size; i++)
+    {
+        os << a[i] << " ";
+    }
+    os << "]";
+    return os;
+}
 
 /*
     Notes:

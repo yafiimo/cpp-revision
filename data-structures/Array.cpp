@@ -25,16 +25,20 @@ int main()
 
         Array<int> a2 = a1;
         Array<int> a3;
-
         a3 = a1;
-
         cout << a3 << endl;
 
         Array<std::string> a4(2);
         a4[0] = "Hello";
         a4[1] = "World";
-
         cout << a4 << endl;
+
+        Array<double> a5(10);
+        for(int i = 0; i < 10; i++)
+        {
+            a5[i] = static_cast<double>(i) / 4;
+        }
+        cout << a5 << endl;
 
 
     }
