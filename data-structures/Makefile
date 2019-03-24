@@ -6,3 +6,6 @@ main: main.cpp
 
 array: Array.cpp headers/Array.hpp
 	${CC} ${CFLAGS} -o array.out Array.cpp
+
+stack: Stack.cpp headers/Stack.hpp
+	${CC} ${CFLAGS} -o stack.out Stack.cpp

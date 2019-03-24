@@ -91,7 +91,7 @@ class Array
             return m_ptr[index];
         }
 
-        T operator[](int index) const
+        T const& operator[](int index) const
         {
             if (!IsValidIndex(index))
             {
