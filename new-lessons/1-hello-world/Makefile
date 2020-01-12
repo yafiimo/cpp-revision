@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c -g -Wall -Weffc++ -Wextra -Wsign-conversion
+CFLAGS=-c -g -Wall -Wextra -Wsign-conversion
 
 main: main.o
 	$(CC) -g -o main.out main.cpp
