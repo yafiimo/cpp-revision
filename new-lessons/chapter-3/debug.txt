@@ -1,0 +1,4 @@
+﻿2020-02-08 22:48:48.153 DEBUG [14938090] [main@25] calling main()
+2020-02-08 22:48:48.154 DEBUG [14938090] [getNumber@13] calling getNumber()
+2020-02-08 22:48:51.469 DEBUG [14938090] [getNumber@13] calling getNumber()
+2020-02-08 22:48:53.022 DEBUG [14938090] [add@6] calling add()
