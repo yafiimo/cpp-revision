@@ -1,6 +1,6 @@
 CC=g++
 LIBS=../libraries
-INC_PATH=-I$(LIBS)/plog-1.1.4/include
+INC_PATH=-I$(LIBS)
 CFLAGS=-c -g -Wall -Wextra -Wsign-conversion
 
 main: main.o

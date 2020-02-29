@@ -6,7 +6,7 @@ int getNumber();
 
 int main()
 {
-    plog::init(plog::debug, "debug.txt");
+    plog::init(plog::debug, "chapter-3/debug.txt");
     LOGD << "calling main()";
 
     int x{ getNumber() };
