@@ -20,7 +20,8 @@ int main()
     std::cout << "x is false (" << x << ')' << '\n';
     std::cout << "y is true  (" << y << ')' << '\n';
 
-    // bool x1{ 2 }; // Using brace initialisation with non true|false|1|0 value produces error
+    // bool x1{ 2 }; // Using brace initialisation with non true|false|1|0 
+    // value produces error on some compilers
 
     bool y1 = 5;
     bool y2 = 0;
@@ -32,7 +33,8 @@ int main()
 
     std::cout << "Enter true or false: ";
 
-    // std::cin only expects 0 or 1 for bool input, any other value will silently fail and return 0;
+    // std::cin ususally only expects 0 or 1 for bool input, any other value will silently fail and return 0;
+    // However, it can also expect any non-zero integer to evaluate to true
     std::cin >> z;
 
     std::cout << "You entered " << z << '\n';
@@ -41,7 +43,6 @@ int main()
     {
         std::cout << "condition == true" << '\n'; 
     }
-
 
     return 0;
 }
