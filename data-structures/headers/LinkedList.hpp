@@ -40,7 +40,7 @@ class LinkedList {
             return m_count == 0;
         }
 
-        // Return number of nodes in lisr
+        // Return number of nodes in list
         int Count() const {
             return m_count;
         }

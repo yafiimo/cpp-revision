@@ -1,5 +1,6 @@
 #include <iostream>
 #include <typeinfo>
+#include <bitset>
 
 int main()
 {
@@ -24,6 +25,22 @@ int main()
     std::cout << "g{1u} is of type " << typeid(g).name() << '\n';
     std::cout << "h{1uL} is of type " << typeid(h).name() << '\n';
     std::cout << "i{1uLL} is of type " << typeid(i).name() << '\n';
+
+    // binary, hex and octal literals
+
+    std::cout << "0b110 (binary) = " << 0b110 << " (decimal)" << '\n';
+    std::cout << "012 (octal) = " << 012 << " (decimal)" << '\n';
+    std::cout << "0x0F (hex) = " << 0x0F << " (decimal)" << '\n';
+
+    std::cout << std::oct << "012 (octal) = " << 012 << " (octal)" << '\n';
+
+    std::cout << std::hex << "0x0F (hex) = " << 0x0F << " (hex)" << '\n';
+
+    std::cout << std::dec; // return to base 10 printing of values
+
+    std::bitset<4> five{ 5 };
+
+    std::cout << "Variable five = " << five <<'\n';
 
     return 0;
 }
